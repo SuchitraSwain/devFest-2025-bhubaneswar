@@ -1,0 +1,506 @@
+.slide {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  animation: slideIn 0.5s ease-out;
+  overflow: visible;
+  position: relative;
+  background: #ffffff;
+  color: #202124;
+  font-family: "Google Sans", "Roboto", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  box-sizing: border-box;
+}
+
+.slide-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.slide-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a73e8;
+  font-weight: 400;
+}
+
+.slide-header p {
+  font-size: 1.2rem;
+  color: #5f6368;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.intro-slide {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background: #ffffff;
+  padding: 4rem 2rem;
+  border: none;
+}
+
+.intro-section p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-align: left;
+  color: #5f6368;
+}
+
+.chrome-devtools-intro {
+  background: #e8f0fe;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #1a73e8;
+  margin-top: 2rem;
+}
+
+.chrome-devtools-intro h4 {
+  color: #1a73e8;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.chrome-devtools-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+  color: #5f6368;
+}
+
+.locations-slide {
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.locations-settings-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background: #ffffff;
+  padding: 2rem;
+  border: none;
+  min-height: calc(100vh - 200px);
+}
+
+.locations-settings-section p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #5f6368;
+}
+
+.settings-explanation {
+  background: #e8f0fe;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #1a73e8;
+  margin: 2rem 0;
+}
+
+.settings-explanation h4 {
+  color: #1a73e8;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.settings-explanation ol {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  color: #5f6368;
+}
+
+.settings-explanation li {
+  margin-bottom: 0.8rem;
+  color: #5f6368;
+}
+
+.settings-explanation ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+  color: #5f6368;
+}
+
+.settings-explanation ul li {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #5f6368;
+}
+
+.settings-screenshot {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.screenshot {
+  max-width: 100%;
+  max-height: 60vh;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8eaed;
+  object-fit: contain;
+}
+
+.image-caption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #5f6368;
+  font-style: italic;
+}
+
+.pro-tip {
+  background: #fff3e0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #ff9800;
+  margin-top: 2rem;
+}
+
+.pro-tip h5 {
+  color: #ff9800;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.pro-tip p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #5f6368;
+}
+
+.sensors-slide {
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.sensors-panel-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background: #ffffff;
+  padding: 2rem;
+  border: none;
+  min-height: calc(100vh - 200px);
+}
+
+.sensors-panel-section p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #5f6368;
+}
+
+.sensors-explanation {
+  background: #e8f0fe;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #1a73e8;
+  margin: 2rem 0;
+}
+
+.sensors-explanation h4 {
+  color: #1a73e8;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.sensors-explanation ol {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  color: #5f6368;
+}
+
+.sensors-explanation li {
+  margin-bottom: 0.8rem;
+  color: #5f6368;
+}
+
+.sensors-explanation ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+  color: #5f6368;
+}
+
+.sensors-explanation ul li {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #5f6368;
+}
+
+.sensors-screenshots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+  align-items: start;
+}
+
+.screenshot-container {
+  text-align: center;
+}
+
+.demo-slide {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.demo-instructions {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.instruction-box {
+  background: #e8f0fe;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #1a73e8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.instruction-box h4 {
+  color: #1a73e8;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.instruction-box ol {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: left;
+  padding-left: 1.5rem;
+  color: #5f6368;
+}
+
+.instruction-box li {
+  margin-bottom: 0.5rem;
+  color: #5f6368;
+}
+
+.demo-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.geolocation-section {
+  background: #ffffff;
+  padding: 2rem;
+  border: none;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.geolocation-section h3 {
+  color: #1a73e8;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.location-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.get-location-btn {
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(26, 115, 232, 0.2);
+}
+
+.get-location-btn:hover:not(:disabled) {
+  background: #1557b0;
+  box-shadow: 0 4px 8px rgba(26, 115, 232, 0.3);
+}
+
+.get-location-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.location-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e8eaed;
+}
+
+.data-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.data-item.location-name-item {
+  grid-column: 1 / -1;
+  text-align: center;
+  background: #e8f0fe;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #1a73e8;
+}
+
+.data-item label {
+  font-weight: 500;
+  color: #1a73e8;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.data-item span {
+  font-size: 1rem;
+  color: #202124;
+  word-break: break-all;
+}
+
+.error-message {
+  background: #fce8e6;
+  color: #d93025;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #f28b82;
+  text-align: center;
+  font-weight: 500;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    padding: 0;
+    width: 100vw;
+  }
+
+  .slide-header h2 {
+    font-size: 2rem;
+  }
+
+  .slide-header p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .intro-section,
+  .locations-settings-section,
+  .sensors-panel-section {
+    padding: 1rem;
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .sensors-screenshots {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .location-data {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .data-item.location-name-item {
+    grid-column: 1;
+  }
+
+  .screenshot {
+    max-width: 100%;
+  }
+
+  .demo-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    padding: 0;
+    width: 100vw;
+  }
+
+  .slide-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .slide-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .slide-header p {
+    max-width: 100%;
+  }
+
+  .intro-section,
+  .locations-settings-section,
+  .sensors-panel-section {
+    padding: 1rem;
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .settings-explanation,
+  .sensors-explanation,
+  .instruction-box {
+    padding: 1.5rem;
+  }
+
+  .demo-content {
+    max-width: 100%;
+  }
+}
