@@ -16,7 +16,8 @@ export default {
         ],
       },
       colors: {
-        "google-blue": "#1a73e8",
+        "google-blue": "#5870E9",
+        "brand-purple": "#8B58EB",
         "google-gray": "#5f6368",
         "google-dark": "#202124",
         "google-light-gray": "#f8f9fa",
