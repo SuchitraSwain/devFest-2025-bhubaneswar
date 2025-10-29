@@ -65,13 +65,30 @@ function App() {
         title: "Presentation Topics",
         type: "topics",
         content: (
-          <div className="topics-slide">
-            <h2 className="topics-title">What We'll Cover Today</h2>
-            <div className="topics-grid">
-              <div className="topic-card">
-                <div className="topic-number">01</div>
-                <h3>Introduction to Modern Web Development</h3>
-                <p>Overview of current trends and technologies</p>
+          <div className="slide intro-slide">
+            <div className="slide-header">
+              <h2>📋 What We'll Cover Today</h2>
+              <p>Overview of today's presentation topics</p>
+            </div>
+            <div className="intro-section">
+              <div className="topics-grid">
+                <div className="topic-card">
+                  <div className="topic-number">01</div>
+                  <h3>
+                    Automating Sensor & Geolocation Overrides in Chrome DevTools
+                    for Test Environments
+                  </h3>
+                </div>
+                <div className="topic-card">
+                  <div className="topic-number">02</div>
+                  <h3>AI innovations in Chrome DevTools</h3>
+                </div>
+                <div className="topic-card">
+                  <div className="topic-number">03</div>
+                  <h3>
+                    Debug auto-closing elements with this dev-tool settings
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
