@@ -159,6 +159,30 @@ function App() {
     localStorage.setItem("presentation-slide", currentSlide.toString());
   }, [currentSlide]);
 
+  // Keyboard navigation for the main presentation
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight" || event.key === " ") {
+        event.preventDefault();
+        if (currentSlide < slides.length - 1) {
+          const newSlide = currentSlide + 1;
+          setCurrentSlide(newSlide);
+          localStorage.setItem("presentation-slide", newSlide.toString());
+        }
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        if (currentSlide > 0) {
+          const newSlide = currentSlide - 1;
+          setCurrentSlide(newSlide);
+          localStorage.setItem("presentation-slide", newSlide.toString());
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, [currentSlide, slides.length]);
+
   return (
     <div className="presentation-container">
       <div

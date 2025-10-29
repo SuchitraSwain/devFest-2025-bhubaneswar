@@ -187,6 +187,14 @@
   .slide-counter {
     @apply absolute top-8 right-8 bg-google-light-gray text-google-gray py-2 px-4 rounded text-xs font-medium border border-google-border flex flex-col items-center gap-1;
   }
+
+  .keyboard-hint {
+    @apply absolute bottom-20 left-1/2 transform -translate-x-1/2 bg-google-dark text-white py-2 px-4 rounded text-xs font-medium opacity-75 transition-opacity duration-300;
+    
+    &:hover {
+      @apply opacity-100;
+    }
+  }
 }
 
 // Responsive styles
@@ -258,6 +266,10 @@
 
     .slide-counter {
       @apply top-4 right-4 text-xs;
+    }
+
+    .keyboard-hint {
+      @apply bottom-16 text-xs px-3 py-1.5;
     }
   }
 }
