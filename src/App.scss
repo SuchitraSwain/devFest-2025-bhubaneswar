@@ -10,7 +10,7 @@
 
   body {
     @apply font-work-sans bg-google-light-gray min-h-screen overflow-hidden text-google-dark;
-    
+
     &.content-slide {
       @apply overflow-auto;
     }
@@ -29,59 +29,80 @@
 
   .slide-container {
     @apply flex-1 flex items-center justify-center p-0 relative overflow-hidden;
-    
+
     &.content-slide {
       @apply items-start overflow-y-auto p-0 h-screen max-h-screen pb-28;
     }
   }
 
   .intro-slide {
-    @apply text-center text-google-dark max-w-full w-full py-16 px-8 animate-slide-in-up;
+    @apply text-google-dark w-4/5 mx-auto py-16 px-8 animate-slide-in-up;
   }
 
-  .logo-container {
-    @apply mb-8 animate-fade-in-scale;
+  .intro-content {
+    @apply flex items-center gap-12 min-h-[70vh];
+  }
+
+  .logo-section {
+    @apply flex-1 animate-fade-in-scale;
     animation-delay: 0.3s;
     animation-fill-mode: both;
   }
 
   .devfest-logo {
-    @apply w-full h-full drop-shadow-lg transition-transform duration-300 ease-in-out;
+    @apply w-full max-w-screen-lg;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-    
-    &:hover {
-      @apply scale-105;
-    }
   }
 
-  .main-title {
-    @apply text-5xl font-normal mb-4 text-google-blue animate-slide-in-up;
+  .presenter-info {
+    @apply flex-1 animate-slide-in-up;
     animation-delay: 0.5s;
     animation-fill-mode: both;
   }
 
-  .subtitle {
-    @apply text-xl font-normal mb-12 text-google-gray animate-slide-in-up;
-    animation-delay: 0.7s;
-    animation-fill-mode: both;
+  .main-title {
+    @apply text-4xl font-bold mb-8 text-google-blue;
   }
 
-  .presenter-info {
-    @apply bg-google-light-gray rounded-lg p-8 border border-google-border animate-slide-in-up max-w-2xl mx-auto;
-    animation-delay: 0.9s;
-    animation-fill-mode: both;
+  .speaker-card {
+    @apply bg-white rounded-xl p-8 border border-google-border shadow-lg;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .presenter-name {
-    @apply text-lg font-medium mb-2 text-google-dark;
+    @apply text-2xl font-bold mb-2 text-google-dark;
+  }
+
+  .speaker-role {
+    @apply text-lg text-google-blue mb-6 font-medium;
+  }
+
+  .topic-section {
+    @apply mb-6 p-4 bg-google-light-blue rounded-lg border-l-4 border-google-blue;
+  }
+
+  .topic-title {
+    @apply text-lg font-semibold mb-2 text-google-blue;
+  }
+
+  .topic-description {
+    @apply text-base text-google-dark leading-relaxed;
+  }
+
+  .event-details {
+    @apply space-y-2;
   }
 
   .event-date {
+    @apply text-base font-medium text-google-dark;
+  }
+
+  .event-venue {
     @apply text-sm text-google-gray;
   }
 
   .topics-slide {
-    @apply text-google-dark max-w-full w-full py-16 px-8 animate-slide-in-up;
+    @apply text-google-dark w-4/5 mx-auto py-16 px-8 animate-slide-in-up;
   }
 
   .topics-title {
@@ -96,14 +117,26 @@
   .topic-card {
     @apply bg-white rounded-lg p-8 border border-google-border transition-all duration-300 ease-in-out relative overflow-hidden animate-slide-in-up shadow-sm;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    
-    &:nth-child(1) { animation-delay: 0.1s; }
-    &:nth-child(2) { animation-delay: 0.2s; }
-    &:nth-child(3) { animation-delay: 0.3s; }
-    &:nth-child(4) { animation-delay: 0.4s; }
-    &:nth-child(5) { animation-delay: 0.5s; }
-    &:nth-child(6) { animation-delay: 0.6s; }
-    
+
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+    &:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+
     &:hover {
       @apply -translate-y-0.5 border-google-blue;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -129,11 +162,11 @@
 
   .nav-button {
     @apply bg-google-light-gray border border-google-border text-google-blue py-3 px-6 rounded cursor-pointer text-sm font-medium transition-all duration-300 ease-in-out;
-    
+
     &:hover:not(:disabled) {
       @apply bg-google-light-blue border-google-blue;
     }
-    
+
     &:disabled {
       @apply opacity-50 cursor-not-allowed;
     }
@@ -145,11 +178,11 @@
 
   .indicator {
     @apply w-2 h-2 rounded-full bg-gray-300 cursor-pointer transition-all duration-300 ease-in-out border-0 flex-shrink-0 block p-0 m-0;
-    
+
     &.active {
       @apply bg-google-blue scale-125;
     }
-    
+
     &:hover {
       @apply bg-google-gray scale-110;
     }
@@ -177,6 +210,42 @@
 
     .topics-grid {
       @apply grid-cols-1 gap-4;
+    }
+
+    .topics-slide {
+      @apply w-full;
+    }
+
+    .intro-slide {
+      @apply w-full;
+    }
+
+    .intro-content {
+      @apply flex-col gap-8;
+    }
+
+    .logo-section {
+      @apply text-center;
+    }
+
+    .devfest-logo {
+      @apply max-w-xs mx-auto;
+    }
+
+    .main-title {
+      @apply text-2xl text-center;
+    }
+
+    .speaker-card {
+      @apply p-6;
+    }
+
+    .presenter-name {
+      @apply text-xl;
+    }
+
+    .speaker-role {
+      @apply text-base;
     }
 
     .topic-card {
