@@ -1,13 +1,11 @@
-import "./GeolocationSlides.css";
+import "./GeolocationSlides.scss";
 
 const LocationsSettings = () => {
   return (
     <div className="slide locations-slide">
       <div className="slide-header">
         <h2>📍 Setting Up Location Presets</h2>
-        <p>
-          Learn how to create custom location presets in Chrome DevTools
-        </p>
+        <p>Learn how to create custom location presets in Chrome DevTools</p>
       </div>
 
       <div className="locations-settings-section">
@@ -34,13 +32,7 @@ const LocationsSettings = () => {
               <strong>Click "Add location"</strong> to create a new preset
             </li>
             <li>
-              <strong>Fill in the details:</strong>
-              <ul>
-                <li>Location name (e.g., "New York")</li>
-                <li>Latitude and Longitude coordinates</li>
-                <li>Timezone ID (e.g., "America/New_York")</li>
-                <li>Locale (e.g., "en-US")</li>
-              </ul>
+              <strong>Fill in the details</strong>
             </li>
           </ol>
         </div>

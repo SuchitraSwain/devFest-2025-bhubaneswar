@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Custom base styles
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply font-google-sans bg-google-light-gray min-h-screen overflow-hidden text-google-dark;
+    
+    &.content-slide {
+      @apply overflow-auto;
+    }
+  }
+
+  #root {
+    @apply h-screen flex items-center justify-center;
+  }
+}
+
+// Component styles
+@layer components {
+  .presentation-container {
+    @apply w-screen h-screen flex flex-col relative bg-white;
+  }
+
+  .slide-container {
+    @apply flex-1 flex items-center justify-center p-0 relative overflow-hidden;
+    
+    &.content-slide {
+      @apply items-start overflow-y-auto p-0 h-screen max-h-screen pb-28;
+    }
+  }
+
+  .intro-slide {
+    @apply text-center text-google-dark max-w-full w-full py-16 px-8 animate-slide-in-up;
+  }
+
+  .logo-container {
+    @apply mb-8 animate-fade-in-scale;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+  }
+
+  .devfest-logo {
+    @apply w-full h-full drop-shadow-lg transition-transform duration-300 ease-in-out;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    
+    &:hover {
+      @apply scale-105;
+    }
+  }
+
+  .main-title {
+    @apply text-6xl font-normal mb-4 text-google-blue animate-slide-in-up;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+  }
+
+  .subtitle {
+    @apply text-2xl font-normal mb-12 text-google-gray animate-slide-in-up;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+  }
+
+  .presenter-info {
+    @apply bg-google-light-gray rounded-lg p-8 border border-google-border animate-slide-in-up max-w-2xl mx-auto;
+    animation-delay: 0.9s;
+    animation-fill-mode: both;
+  }
+
+  .presenter-name {
+    @apply text-xl font-medium mb-2 text-google-dark;
+  }
+
+  .event-date {
+    @apply text-base text-google-gray;
+  }
+
+  .topics-slide {
+    @apply text-google-dark max-w-full w-full py-16 px-8 animate-slide-in-up;
+  }
+
+  .topics-title {
+    @apply text-5xl font-normal text-center mb-12 text-google-blue;
+  }
+
+  .topics-grid {
+    @apply grid gap-8 px-4;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .topic-card {
+    @apply bg-white rounded-lg p-8 border border-google-border transition-all duration-300 ease-in-out relative overflow-hidden animate-slide-in-up shadow-sm;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
+    &:nth-child(4) { animation-delay: 0.4s; }
+    &:nth-child(5) { animation-delay: 0.5s; }
+    &:nth-child(6) { animation-delay: 0.6s; }
+    
+    &:hover {
+      @apply -translate-y-0.5 border-google-blue;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .topic-number {
+    @apply text-3xl font-medium text-google-blue mb-4 relative;
+  }
+
+  .topic-card h3 {
+    @apply text-xl font-medium mb-4 text-google-dark;
+  }
+
+  .topic-card p {
+    @apply text-base text-google-gray leading-relaxed;
+  }
+
+  .navigation {
+    @apply flex items-center justify-between py-4 px-8 bg-white border-t border-google-border fixed bottom-0 left-0 right-0 z-50 shadow-lg;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-button {
+    @apply bg-google-light-gray border border-google-border text-google-blue py-3 px-6 rounded cursor-pointer text-base font-medium transition-all duration-300 ease-in-out;
+    
+    &:hover:not(:disabled) {
+      @apply bg-google-light-blue border-google-blue;
+    }
+    
+    &:disabled {
+      @apply opacity-50 cursor-not-allowed;
+    }
+  }
+
+  .slide-indicators {
+    @apply flex gap-1.5 items-center justify-center;
+  }
+
+  .indicator {
+    @apply w-2 h-2 rounded-full bg-gray-300 cursor-pointer transition-all duration-300 ease-in-out border-0 flex-shrink-0 block p-0 m-0;
+    
+    &.active {
+      @apply bg-google-blue scale-125;
+    }
+    
+    &:hover {
+      @apply bg-google-gray scale-110;
+    }
+  }
+
+  .slide-counter {
+    @apply absolute top-8 right-8 bg-google-light-gray text-google-gray py-2 px-4 rounded text-sm font-medium border border-google-border flex flex-col items-center gap-1;
+  }
+}
+
+// Responsive styles
+@layer utilities {
+  @media (max-width: 768px) {
+    .main-title {
+      @apply text-4xl;
+    }
+
+    .subtitle {
+      @apply text-xl;
+    }
+
+    .topics-title {
+      @apply text-3xl;
+    }
+
+    .topics-grid {
+      @apply grid-cols-1 gap-4;
+    }
+
+    .topic-card {
+      @apply p-6;
+    }
+
+    .navigation {
+      @apply p-4;
+    }
+
+    .nav-button {
+      @apply py-2.5 px-4 text-sm;
+    }
+
+    .slide-counter {
+      @apply top-4 right-4 text-xs;
+    }
+  }
+}

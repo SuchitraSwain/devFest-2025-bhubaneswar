@@ -1,0 +1,490 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Component styles
+@layer components {
+  .location-demo {
+    @apply w-screen h-screen m-0 p-0 fixed top-0 left-0 overflow-hidden flex flex-col;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+  }
+
+  // Slide Navigation
+  .slide-navigation {
+    @apply flex justify-center gap-4 py-4 px-8 fixed top-0 left-0 right-0 z-50 border-b-2;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .nav-btn {
+    @apply text-white border-2 py-3 px-6 rounded-lg text-base font-semibold cursor-pointer transition-all duration-300 ease-in-out min-w-36;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      @apply -translate-y-0.5;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    &.active {
+      @apply border-cyan-400;
+      background: linear-gradient(45deg, #00bcd4, #0097a7);
+      box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+    }
+  }
+
+  // Slide Counter
+  .slide-counter {
+    @apply ml-8 text-base font-semibold text-cyan-400 py-2 px-4 rounded-full border;
+    background: rgba(0, 188, 212, 0.1);
+    border-color: rgba(0, 188, 212, 0.3);
+  }
+
+  // Slide Container
+  .slide {
+    @apply w-full h-screen flex flex-col pt-20 pb-20 animate-slide-in overflow-hidden relative;
+    // Account for fixed navigation
+  }
+
+  // Slide Headers
+  .slide-header {
+    @apply text-center py-12 px-16 border-b;
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    h2 {
+      @apply text-5xl mb-4 font-bold text-white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      @apply text-xl opacity-90 font-light max-w-4xl mx-auto;
+    }
+  }
+
+  .demo-header {
+    @apply text-center mb-12;
+
+    h2 {
+      @apply text-4xl mb-4;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      @apply text-xl opacity-90;
+    }
+  }
+
+  .demo-content {
+    @apply flex-1 flex flex-col;
+  }
+
+  // Introduction Section
+  .intro-section {
+    @apply py-6 px-16 m-0 border-b flex-1 flex flex-col justify-center;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    h3 {
+      @apply text-4xl mb-4 text-cyan-400 text-center font-semibold;
+    }
+
+    p {
+      @apply text-xl leading-relaxed mb-6 opacity-95 text-center max-w-4xl mx-auto;
+    }
+  }
+
+  .chrome-devtools-intro {
+    @apply mt-4 p-4 rounded-r-lg;
+    background: rgba(0, 188, 212, 0.1);
+    border-left: 4px solid #00bcd4;
+
+    h4 {
+      @apply text-cyan-400 mb-4 text-xl font-semibold;
+    }
+  }
+
+  // Locations Settings Section
+  .locations-settings-section {
+    @apply py-6 px-16 m-0 border-b flex-1 flex flex-col justify-center;
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    h3 {
+      @apply text-3xl mb-4 text-cyan-400 text-center font-semibold;
+    }
+  }
+
+  .settings-explanation {
+    @apply py-4 my-4;
+
+    h4 {
+      @apply text-white mb-4 text-lg font-medium;
+    }
+
+    ol {
+      @apply m-0 pl-6;
+    }
+
+    li {
+      @apply mb-3 leading-relaxed;
+    }
+
+    ul {
+      @apply mt-2 ml-4 pl-4;
+
+      li {
+        @apply mb-2 text-sm opacity-90;
+      }
+    }
+  }
+
+  .settings-screenshot {
+    @apply text-center my-8;
+  }
+
+  .screenshot {
+    @apply max-w-full h-auto rounded-lg border-2;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .image-caption {
+    @apply mt-3 text-sm opacity-80 italic;
+  }
+
+  .pro-tip {
+    @apply py-4 mt-6 pl-4;
+    border-left: 3px solid #ffc107;
+
+    h5 {
+      @apply text-yellow-400 mb-3 text-base font-medium;
+    }
+
+    p {
+      @apply m-0 leading-relaxed;
+    }
+  }
+
+  // Sensors Panel Section
+  .sensors-panel-section {
+    @apply py-6 px-16 m-0 border-b flex-1 flex flex-col justify-center;
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    h3 {
+      @apply text-3xl mb-4 text-cyan-400 text-center font-semibold;
+    }
+  }
+
+  .sensors-explanation {
+    @apply py-4 my-4;
+
+    h4 {
+      @apply text-white mb-4 text-lg font-medium;
+    }
+
+    ol {
+      @apply m-0 pl-6;
+    }
+
+    li {
+      @apply mb-3 leading-relaxed;
+    }
+
+    ul {
+      @apply mt-2 ml-4 pl-4;
+
+      li {
+        @apply mb-2 text-sm opacity-90;
+      }
+    }
+  }
+
+  .sensors-screenshots {
+    @apply grid gap-8 my-8;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .screenshot-container {
+    @apply text-center;
+  }
+
+  // Demo Section
+  .demo-section {
+    @apply border-2 rounded-xl p-8 backdrop-blur-sm mb-8 text-center;
+    background: linear-gradient(
+      135deg,
+      rgba(76, 175, 80, 0.1),
+      rgba(46, 125, 50, 0.1)
+    );
+    border-color: rgba(76, 175, 80, 0.3);
+
+    h3 {
+      @apply text-3xl mb-4 text-green-400;
+    }
+
+    p {
+      @apply text-lg leading-relaxed opacity-90;
+    }
+  }
+
+  .keyboard-hint {
+    @apply mt-2 text-sm opacity-70 italic;
+  }
+
+  // Keyboard Hint Section
+  .keyboard-hint-section {
+    @apply text-center py-4 px-16 fixed bottom-0 left-0 right-0 z-50 border-t;
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  // Demo Instructions
+  .demo-instructions {
+    @apply py-8 px-16;
+  }
+
+  .instruction-box {
+    @apply py-6 max-w-2xl mx-auto pl-4;
+    border-left: 3px solid #4caf50;
+
+    h4 {
+      @apply text-green-400 mb-4 text-lg font-medium;
+    }
+
+    ol {
+      @apply m-0 pl-6;
+    }
+
+    li {
+      @apply mb-3 leading-relaxed text-base;
+    }
+  }
+
+  .geolocation-section {
+    @apply py-8 px-16 text-center flex-1 flex flex-col justify-center;
+    background: rgba(255, 255, 255, 0.05);
+
+    h3 {
+      @apply text-4xl mb-6 text-cyan-400 font-semibold;
+    }
+  }
+
+  .location-display {
+    @apply flex flex-col gap-6 items-center;
+  }
+
+  .get-location-btn {
+    @apply text-white border-2 py-5 px-10 rounded-lg text-xl font-bold cursor-pointer transition-all duration-300 ease-in-out min-w-64;
+    background: linear-gradient(45deg, #00bcd4, #0097a7);
+    border-color: #00bcd4;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+
+    &:hover:not(:disabled) {
+      @apply -translate-y-0.5;
+      box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+    }
+
+    &:disabled {
+      @apply opacity-70 cursor-not-allowed;
+      transform: none;
+    }
+  }
+
+  .location-data {
+    @apply grid gap-4 w-full max-w-2xl;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .data-item {
+    @apply flex flex-col gap-2 p-4 rounded-lg text-left;
+    background: rgba(255, 255, 255, 0.05);
+
+    label {
+      @apply font-semibold opacity-90 text-sm;
+    }
+
+    span {
+      @apply font-mono bg-black bg-opacity-20 p-2 rounded text-base text-green-400 font-bold;
+    }
+  }
+
+  .location-name-item {
+    @apply col-span-full text-center;
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+
+    span {
+      @apply font-sans text-xl text-yellow-400 font-bold;
+    }
+  }
+
+  .error-message {
+    @apply border border-red-300 text-red-400 p-4 rounded-lg text-center max-w-lg;
+    background: rgba(255, 0, 0, 0.1);
+  }
+
+  .instructions-section {
+    @apply rounded-xl p-6 backdrop-blur-sm;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .toggle-instructions {
+    @apply text-white border-none py-4 px-8 rounded-lg text-base font-bold cursor-pointer transition-all duration-300 ease-in-out w-full mb-4;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+
+    &:hover {
+      @apply -translate-y-0.5;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .instructions-content h3 {
+    @apply text-yellow-400 mb-6 text-center;
+  }
+
+  .steps {
+    @apply flex flex-col gap-4 mb-8;
+  }
+
+  .step {
+    @apply flex items-start gap-4 p-4 rounded-lg;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .step-number {
+    @apply text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0;
+    background: linear-gradient(45deg, #4caf50, #45a049);
+  }
+
+  .step-content h4 {
+    @apply m-0 mb-2 text-yellow-400;
+  }
+
+  .step-content p {
+    @apply m-0 opacity-90;
+  }
+
+  .step-content kbd {
+    @apply bg-white bg-opacity-20 py-1 px-2 rounded font-mono text-sm;
+  }
+
+  .example-locations {
+    @apply mb-8;
+
+    h4 {
+      @apply text-yellow-400 mb-4;
+    }
+  }
+
+  .location-examples {
+    @apply grid gap-2;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .example-location {
+    @apply p-3 rounded font-mono text-sm;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .code-example {
+    @apply rounded-lg p-4 border-l-4 border-green-400;
+    background: rgba(0, 0, 0, 0.3);
+
+    h4 {
+      @apply text-yellow-400 mb-2;
+    }
+
+    pre {
+      @apply p-4 rounded overflow-x-auto font-mono text-sm leading-snug m-0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// Responsive styles
+@layer utilities {
+  @media (max-width: 768px) {
+    .slide-header {
+      @apply py-6 px-8;
+
+      h2 {
+        @apply text-4xl;
+      }
+
+      p {
+        @apply text-xl;
+      }
+    }
+
+    .intro-section,
+    .locations-settings-section,
+    .sensors-panel-section {
+      @apply py-8 px-8;
+
+      h3 {
+        @apply text-3xl;
+      }
+    }
+
+    .intro-section p {
+      @apply text-xl;
+    }
+
+    .location-data {
+      @apply grid-cols-1;
+    }
+
+    .sensors-screenshots {
+      @apply grid-cols-1 gap-4;
+    }
+
+    .settings-explanation,
+    .sensors-explanation {
+      @apply p-4;
+    }
+
+    .pro-tip {
+      @apply p-4;
+    }
+
+    .slide-navigation {
+      @apply flex-col gap-2 py-2 px-4;
+    }
+
+    .slide-counter {
+      @apply ml-0 mt-2 text-center;
+    }
+
+    .nav-btn {
+      @apply min-w-auto w-full py-2.5 px-4;
+    }
+
+    .next-slide-btn,
+    .back-slide-btn {
+      @apply min-w-auto w-full py-3 px-6;
+    }
+
+    .instruction-box {
+      @apply p-4;
+    }
+
+    .geolocation-section {
+      @apply py-8 px-8;
+
+      h3 {
+        @apply text-3xl;
+      }
+    }
+
+    .keyboard-hint-section {
+      @apply py-2 px-8;
+    }
+  }
+}

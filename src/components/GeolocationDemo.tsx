@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./GeolocationSlides.css";
+import "./GeolocationSlides.scss";
 
 interface GeolocationData {
   latitude: number;

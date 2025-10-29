@@ -1,4 +1,4 @@
-import "./GeolocationSlides.css";
+import "./GeolocationSlides.scss";
 
 const GeolocationIntro = () => {
   return (
