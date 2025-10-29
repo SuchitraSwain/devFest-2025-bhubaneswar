@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import "./App.scss";
+import "./styles/App.scss";
 import GeolocationIntro from "./components/GeolocationIntro";
 import LocationsSettings from "./components/LocationsSettings";
 import SensorsPanel from "./components/SensorsPanel";

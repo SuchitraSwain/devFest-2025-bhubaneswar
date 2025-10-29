@@ -1,4 +1,4 @@
-import "./GeolocationSlides.scss";
+import "../styles/components/GeolocationSlides.scss";
 
 const SensorsPanel = () => {
   return (
