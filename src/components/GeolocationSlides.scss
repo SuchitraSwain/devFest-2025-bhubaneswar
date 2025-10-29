@@ -9,14 +9,14 @@
   }
 
   .slide-header {
-    @apply text-left mb-12 py-6 px-8 bg-google-light-gray border-b border-google-border;
+    @apply text-left mb-2 py-4 px-8 bg-google-light-gray border-b border-google-border;
 
     h2 {
-      @apply text-3xl mb-4 text-google-blue font-normal;
+      @apply text-2xl mb-4 text-google-blue font-bold;
     }
 
     p {
-      @apply text-lg text-google-gray max-w-4xl leading-relaxed;
+      @apply text-base text-google-gray max-w-4xl leading-relaxed;
     }
   }
 
@@ -25,7 +25,7 @@
   }
 
   .intro-section {
-    @apply w-4/5 mx-auto bg-white p-16 border-none;
+    @apply w-5/6 mx-auto bg-white p-16 border-none;
 
     p {
       @apply text-lg leading-loose mb-8 text-left text-google-gray;
@@ -49,7 +49,7 @@
   }
 
   .locations-settings-section {
-    @apply w-4/5 mx-auto bg-white p-8 border-none;
+    @apply w-5/6 mx-auto bg-white p-8 border-none;
     min-height: calc(100vh - 200px);
 
     p {
@@ -57,8 +57,21 @@
     }
   }
 
+  .locations-layout {
+    @apply grid gap-8 items-start;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .settings-left {
+    @apply flex flex-col;
+  }
+
+  .settings-right {
+    @apply flex flex-col gap-8;
+  }
+
   .settings-explanation {
-    @apply bg-google-light-blue p-8 rounded-lg border-l-4 border-google-blue my-8;
+    @apply bg-google-light-blue p-8 rounded-lg border-l-4 border-google-blue mt-8;
 
     h4 {
       @apply text-google-blue text-lg mb-4 font-medium;
@@ -112,11 +125,11 @@
   }
 
   .sensors-panel-section {
-    @apply w-4/5 mx-auto bg-white p-8 border-none;
+    @apply w-5/6 mx-auto bg-white p-8 border-none;
     min-height: calc(100vh - 200px);
 
     p {
-      @apply text-lg leading-loose mb-8 text-center text-google-gray;
+      @apply text-lg leading-loose text-center text-google-gray;
     }
   }
 
@@ -144,9 +157,17 @@
     }
   }
 
-  .sensors-screenshots {
-    @apply grid gap-8 my-8 items-start;
+  .sensors-layout {
+    @apply grid gap-8 items-start;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .sensors-right {
+    @apply flex flex-col gap-8;
+  }
+
+  .sensors-screenshots {
+    @apply flex flex-col gap-6 my-8 items-start;
   }
 
   .screenshot-container {
@@ -178,7 +199,7 @@
   }
 
   .demo-content {
-    @apply w-4/5 mx-auto;
+    @apply w-5/6 mx-auto;
   }
 
   .geolocation-section {
@@ -257,8 +278,18 @@
       @apply p-4 w-full mx-auto min-h-0;
     }
 
+    .locations-layout {
+      @apply gap-4;
+      grid-template-columns: 1fr;
+    }
+
+    .sensors-layout {
+      @apply gap-4;
+      grid-template-columns: 1fr;
+    }
+
     .sensors-screenshots {
-      @apply grid-cols-1 gap-4;
+      @apply gap-4;
     }
 
     .location-data {
@@ -299,6 +330,16 @@
     .locations-settings-section,
     .sensors-panel-section {
       @apply p-4 w-full mx-auto min-h-0;
+    }
+
+    .locations-layout {
+      @apply gap-4;
+      grid-template-columns: 1fr;
+    }
+
+    .sensors-layout {
+      @apply gap-4;
+      grid-template-columns: 1fr;
     }
 
     .settings-explanation,
