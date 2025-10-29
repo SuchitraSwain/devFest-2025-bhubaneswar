@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply font-google-sans bg-google-light-gray min-h-screen overflow-hidden text-google-dark;
+    @apply font-work-sans bg-google-light-gray min-h-screen overflow-hidden text-google-dark;
     
     &.content-slide {
       @apply overflow-auto;
@@ -55,13 +55,13 @@
   }
 
   .main-title {
-    @apply text-6xl font-normal mb-4 text-google-blue animate-slide-in-up;
+    @apply text-5xl font-normal mb-4 text-google-blue animate-slide-in-up;
     animation-delay: 0.5s;
     animation-fill-mode: both;
   }
 
   .subtitle {
-    @apply text-2xl font-normal mb-12 text-google-gray animate-slide-in-up;
+    @apply text-xl font-normal mb-12 text-google-gray animate-slide-in-up;
     animation-delay: 0.7s;
     animation-fill-mode: both;
   }
@@ -73,11 +73,11 @@
   }
 
   .presenter-name {
-    @apply text-xl font-medium mb-2 text-google-dark;
+    @apply text-lg font-medium mb-2 text-google-dark;
   }
 
   .event-date {
-    @apply text-base text-google-gray;
+    @apply text-sm text-google-gray;
   }
 
   .topics-slide {
@@ -85,7 +85,7 @@
   }
 
   .topics-title {
-    @apply text-5xl font-normal text-center mb-12 text-google-blue;
+    @apply text-4xl font-normal text-center mb-12 text-google-blue;
   }
 
   .topics-grid {
@@ -111,15 +111,15 @@
   }
 
   .topic-number {
-    @apply text-3xl font-medium text-google-blue mb-4 relative;
+    @apply text-2xl font-medium text-google-blue mb-4 relative;
   }
 
   .topic-card h3 {
-    @apply text-xl font-medium mb-4 text-google-dark;
+    @apply text-lg font-medium mb-4 text-google-dark;
   }
 
   .topic-card p {
-    @apply text-base text-google-gray leading-relaxed;
+    @apply text-sm text-google-gray leading-relaxed;
   }
 
   .navigation {
@@ -128,7 +128,7 @@
   }
 
   .nav-button {
-    @apply bg-google-light-gray border border-google-border text-google-blue py-3 px-6 rounded cursor-pointer text-base font-medium transition-all duration-300 ease-in-out;
+    @apply bg-google-light-gray border border-google-border text-google-blue py-3 px-6 rounded cursor-pointer text-sm font-medium transition-all duration-300 ease-in-out;
     
     &:hover:not(:disabled) {
       @apply bg-google-light-blue border-google-blue;
@@ -156,7 +156,7 @@
   }
 
   .slide-counter {
-    @apply absolute top-8 right-8 bg-google-light-gray text-google-gray py-2 px-4 rounded text-sm font-medium border border-google-border flex flex-col items-center gap-1;
+    @apply absolute top-8 right-8 bg-google-light-gray text-google-gray py-2 px-4 rounded text-xs font-medium border border-google-border flex flex-col items-center gap-1;
   }
 }
 
@@ -164,15 +164,15 @@
 @layer utilities {
   @media (max-width: 768px) {
     .main-title {
-      @apply text-4xl;
+      @apply text-3xl;
     }
 
     .subtitle {
-      @apply text-xl;
+      @apply text-lg;
     }
 
     .topics-title {
-      @apply text-3xl;
+      @apply text-2xl;
     }
 
     .topics-grid {
@@ -188,7 +188,7 @@
     }
 
     .nav-button {
-      @apply py-2.5 px-4 text-sm;
+      @apply py-2.5 px-4 text-xs;
     }
 
     .slide-counter {

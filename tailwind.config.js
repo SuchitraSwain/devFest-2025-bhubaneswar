@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "google-sans": [
+        "work-sans": [
+          '"Work Sans"',
           '"Google Sans"',
           '"Roboto"',
           '"Segoe UI"',
