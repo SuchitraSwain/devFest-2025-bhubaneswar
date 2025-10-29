@@ -4,6 +4,7 @@ import GeolocationIntro from "./components/GeolocationIntro";
 import LocationsSettings from "./components/LocationsSettings";
 import SensorsPanel from "./components/SensorsPanel";
 import GeolocationDemo from "./components/GeolocationDemo";
+import AutoClosingDebug from "./components/AutoClosingDebug";
 
 interface Slide {
   id: number;
@@ -81,13 +82,13 @@ function App() {
                 </div>
                 <div className="topic-card">
                   <div className="topic-number">02</div>
-                  <h3>AI innovations in Chrome DevTools</h3>
-                </div>
-                <div className="topic-card">
-                  <div className="topic-number">03</div>
                   <h3>
                     Debug auto-closing elements with this dev-tool settings
                   </h3>
+                </div>
+                <div className="topic-card">
+                  <div className="topic-number">03</div>
+                  <h3>AI innovations in Chrome DevTools</h3>
                 </div>
               </div>
             </div>
@@ -117,6 +118,12 @@ function App() {
         title: "Geolocation Demo",
         type: "content",
         content: <GeolocationDemo />,
+      },
+      {
+        id: 6,
+        title: "Debugging Auto‑Closing Elements",
+        type: "content",
+        content: <AutoClosingDebug />,
       },
     ],
     []
