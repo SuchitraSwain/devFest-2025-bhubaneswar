@@ -9,24 +9,24 @@
   }
 
   .slide-header {
-    @apply text-center mb-12 py-12 px-8 bg-google-light-gray border-b border-google-border;
-    
+    @apply text-left mb-12 py-6 px-8 bg-google-light-gray border-b border-google-border;
+
     h2 {
       @apply text-3xl mb-4 text-google-blue font-normal;
     }
-    
+
     p {
-      @apply text-lg text-google-gray max-w-4xl mx-auto leading-relaxed;
+      @apply text-lg text-google-gray max-w-4xl leading-relaxed;
     }
   }
 
   .intro-slide {
-    @apply justify-center items-center text-center;
+    @apply justify-start items-start text-left;
   }
 
   .intro-section {
     @apply w-full max-w-full m-0 bg-white p-16 border-none;
-    
+
     p {
       @apply text-lg leading-loose mb-8 text-left text-google-gray;
     }
@@ -34,11 +34,11 @@
 
   .chrome-devtools-intro {
     @apply bg-google-light-blue p-8 rounded-lg border-l-4 border-google-blue mt-8;
-    
+
     h4 {
       @apply text-google-blue text-xl mb-4 font-medium;
     }
-    
+
     p {
       @apply text-base leading-loose m-0 text-google-gray;
     }
@@ -51,7 +51,7 @@
   .locations-settings-section {
     @apply w-full max-w-full m-0 bg-white p-8 border-none;
     min-height: calc(100vh - 200px);
-    
+
     p {
       @apply text-lg leading-loose mb-8 text-center text-google-gray;
     }
@@ -59,22 +59,22 @@
 
   .settings-explanation {
     @apply bg-google-light-blue p-8 rounded-lg border-l-4 border-google-blue my-8;
-    
+
     h4 {
       @apply text-google-blue text-lg mb-4 font-medium;
     }
-    
+
     ol {
       @apply text-base leading-loose pl-6 text-google-gray;
     }
-    
+
     li {
       @apply mb-3 text-google-gray;
     }
-    
+
     ul {
       @apply mt-2 pl-6 text-google-gray;
-      
+
       li {
         @apply mb-2 text-sm text-google-gray;
       }
@@ -97,11 +97,11 @@
 
   .pro-tip {
     @apply bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500 mt-8;
-    
+
     h5 {
       @apply text-orange-500 text-lg mb-2 font-medium;
     }
-    
+
     p {
       @apply text-base leading-relaxed m-0 text-google-gray;
     }
@@ -114,7 +114,7 @@
   .sensors-panel-section {
     @apply w-full max-w-full m-0 bg-white p-8 border-none;
     min-height: calc(100vh - 200px);
-    
+
     p {
       @apply text-lg leading-loose mb-8 text-center text-google-gray;
     }
@@ -122,22 +122,22 @@
 
   .sensors-explanation {
     @apply bg-google-light-blue p-8 rounded-lg border-l-4 border-google-blue my-8;
-    
+
     h4 {
       @apply text-google-blue text-lg mb-4 font-medium;
     }
-    
+
     ol {
       @apply text-base leading-loose pl-6 text-google-gray;
     }
-    
+
     li {
       @apply mb-3 text-google-gray;
     }
-    
+
     ul {
       @apply mt-2 pl-6 text-google-gray;
-      
+
       li {
         @apply mb-2 text-sm text-google-gray;
       }
@@ -163,15 +163,15 @@
 
   .instruction-box {
     @apply bg-google-light-blue p-8 rounded-lg border-l-4 border-google-blue max-w-2xl mx-auto;
-    
+
     h4 {
       @apply text-google-blue text-xl mb-4 font-medium;
     }
-    
+
     ol {
       @apply text-lg leading-loose text-left pl-6 text-google-gray;
     }
-    
+
     li {
       @apply mb-2 text-google-gray;
     }
@@ -184,7 +184,7 @@
   .geolocation-section {
     @apply bg-white p-8 border-none text-center flex flex-col justify-center;
     min-height: 60vh;
-    
+
     h3 {
       @apply text-google-blue text-2xl mb-8 font-medium;
     }
@@ -197,12 +197,12 @@
   .get-location-btn {
     @apply bg-google-blue text-white border-none py-4 px-8 rounded text-base font-medium cursor-pointer transition-all duration-300 ease-in-out;
     box-shadow: 0 2px 4px rgba(26, 115, 232, 0.2);
-    
+
     &:hover:not(:disabled) {
       @apply bg-blue-700;
       box-shadow: 0 4px 8px rgba(26, 115, 232, 0.3);
     }
-    
+
     &:disabled {
       @apply opacity-60 cursor-not-allowed;
     }
@@ -215,15 +215,15 @@
 
   .data-item {
     @apply flex flex-col gap-2 text-left;
-    
+
     &.location-name-item {
       @apply col-span-2 text-center bg-google-light-blue p-4 rounded-lg border border-google-blue;
     }
-    
+
     label {
       @apply font-medium text-google-blue text-sm uppercase tracking-wider;
     }
-    
+
     span {
       @apply text-sm text-google-dark break-all;
     }
@@ -240,73 +240,73 @@
     .slide {
       @apply p-0 w-screen;
     }
-    
+
     .slide-header {
       h2 {
         @apply text-3xl;
       }
-      
+
       p {
         @apply text-base max-w-full;
       }
     }
-    
+
     .intro-section,
     .locations-settings-section,
     .sensors-panel-section {
       @apply p-4 max-w-full min-h-0;
     }
-    
+
     .sensors-screenshots {
       @apply grid-cols-1 gap-4;
     }
-    
+
     .location-data {
       @apply grid-cols-1 gap-3;
     }
-    
+
     .data-item.location-name-item {
       @apply col-span-1;
     }
-    
+
     .screenshot {
       @apply max-w-full;
     }
-    
+
     .demo-content {
       @apply max-w-full;
     }
   }
-  
+
   @media (max-width: 480px) {
     .slide {
       @apply p-0 w-screen;
     }
-    
+
     .slide-header {
       @apply py-6 px-4;
-      
+
       h2 {
         @apply text-3xl;
       }
-      
+
       p {
         @apply max-w-full;
       }
     }
-    
+
     .intro-section,
     .locations-settings-section,
     .sensors-panel-section {
       @apply p-4 max-w-full min-h-0;
     }
-    
+
     .settings-explanation,
     .sensors-explanation,
     .instruction-box {
       @apply p-6;
     }
-    
+
     .demo-content {
       @apply max-w-full;
     }
