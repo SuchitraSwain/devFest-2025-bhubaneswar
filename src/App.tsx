@@ -7,6 +7,8 @@ import GeolocationDemo from "./components/GeolocationDemo";
 import AutoClosingDebug from "./components/AutoClosingDebug";
 import DevToolsSuperpowers from "./components/DevToolsSuperpowers";
 import { DEVTOOLS_FEATURES } from "./components/devtoolsFeatures";
+import IntroSlide from "./components/IntroSlide";
+import TopicsSlide from "./components/TopicsSlide";
 
 interface Slide {
   id: number;
@@ -27,79 +29,13 @@ function App() {
         id: 0,
         title: "Welcome to DevFest 2025",
         type: "intro",
-        content: (
-          <div className="intro-slide">
-            <div className="intro-content">
-              <div className="logo-section">
-                <img
-                  src="/logo.png"
-                  alt="DevFest Logo"
-                  className="devfest-logo"
-                />
-              </div>
-              <div className="presenter-info">
-                <h1 className="main-title">DevFest Bhubaneswar 2025</h1>
-                <div className="speaker-card">
-                  <h2 className="presenter-name">Suchitra Swain</h2>
-                  <p className="speaker-role">
-                    Sr Software Engineer &amp; Sr Full Stack Web Developer
-                  </p>
-                  <div className="topic-section">
-                    <h3 className="topic-title">🎯 Topic</h3>
-                    <p className="topic-description">
-                      Mastering Debug &amp; Accessibility with Chrome DevTools
-                      using AI Assistant and AI Console
-                    </p>
-                  </div>
-                  <div className="event-details">
-                    <p className="event-date">📅 9th November 2025</p>
-                    <p className="event-venue">
-                      📍 Pipul Pamaja Premium Hotel and Convention
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ),
+        content: <IntroSlide />,
       },
       {
         id: 1,
         title: "Presentation Topics",
         type: "topics",
-        content: (
-          <div className="slide intro-slide">
-            <div className="slide-header">
-              <h2>📋 What We'll Cover Today</h2>
-              <p>Overview of today's presentation topics</p>
-            </div>
-            <div className="intro-section">
-              <div className="topics-grid">
-                <div className="topic-card">
-                  <div className="topic-number">01</div>
-                  <h3>
-                    Automating Sensor & Geolocation Overrides in Chrome DevTools
-                    for Test Environments
-                  </h3>
-                </div>
-                <div className="topic-card">
-                  <div className="topic-number">02</div>
-                  <h3>
-                    Debug auto-closing elements with this dev-tool settings
-                  </h3>
-                </div>
-                <div className="topic-card">
-                  <div className="topic-number">03</div>
-                  <h3>AI innovations in Chrome DevTools</h3>
-                </div>
-                <div className="topic-card">
-                  <div className="topic-number">04</div>
-                  <h3>14 Hidden DevTools Superpowers Most Developers Miss</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        ),
+        content: <TopicsSlide />,
       },
       {
         id: 2,
