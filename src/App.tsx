@@ -5,6 +5,8 @@ import LocationsSettings from "./components/LocationsSettings";
 import SensorsPanel from "./components/SensorsPanel";
 import GeolocationDemo from "./components/GeolocationDemo";
 import AutoClosingDebug from "./components/AutoClosingDebug";
+import DevToolsSuperpowers from "./components/DevToolsSuperpowers";
+import { DEVTOOLS_FEATURES } from "./components/devtoolsFeatures";
 
 interface Slide {
   id: number;
@@ -90,6 +92,10 @@ function App() {
                   <div className="topic-number">03</div>
                   <h3>AI innovations in Chrome DevTools</h3>
                 </div>
+                <div className="topic-card">
+                  <div className="topic-number">04</div>
+                  <h3>14 Hidden DevTools Superpowers Most Developers Miss</h3>
+                </div>
               </div>
             </div>
           </div>
@@ -125,6 +131,12 @@ function App() {
         type: "content",
         content: <AutoClosingDebug />,
       },
+      ...DEVTOOLS_FEATURES.map((f, idx) => ({
+        id: 7 + idx,
+        title: `DevTools Superpower ${f.id}`,
+        type: "content" as const,
+        content: <DevToolsSuperpowers itemIndex={idx} />,
+      })),
     ],
     []
   );
