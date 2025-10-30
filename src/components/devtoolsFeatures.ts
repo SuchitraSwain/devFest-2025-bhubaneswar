@@ -17,4 +17,11 @@ export const DEVTOOLS_FEATURES: DevtoolFeature[] = [
     description:
       "Logpoints let you log values in the Console during runtime without modifying your source code or stopping execution.",
   },
+
+  {
+    id: 3,
+    title: "Coverage: Find unused JavaScript and CSS",
+    description:
+      "The Coverage panel helps you find unused JavaScript and CSS code. Removing unused code can speed up your page load and save the mobile data of your users.",
+  },
 ];

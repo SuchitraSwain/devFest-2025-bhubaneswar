@@ -134,7 +134,7 @@
   }
 
   .sensors-explanation {
-    @apply bg-google-light-blue p-8 rounded-lg border-l-4 border-google-blue my-8;
+    @apply bg-google-light-blue p-8 rounded-lg border-l-4 border-google-blue;
 
     h4 {
       @apply text-google-blue text-lg mb-4 font-medium;
@@ -158,7 +158,7 @@
   }
 
   .sensors-layout {
-    @apply grid gap-8 items-start;
+    @apply grid gap-8 items-start my-8;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -167,7 +167,7 @@
   }
 
   .sensors-screenshots {
-    @apply flex flex-col gap-6 my-8 items-start;
+    @apply flex flex-col gap-6 items-start;
   }
 
   .screenshot-container {
@@ -353,5 +353,3 @@
     }
   }
 }
-
-
