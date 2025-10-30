@@ -1,5 +1,6 @@
 import { DEVTOOLS_FEATURES } from "./devtoolsFeatures";
 import CssShadowEditors from "./CssShadowEditors";
+import Logpoint from "./Logpoint";
 
 interface Props {
   itemIndex: number;
@@ -34,6 +35,7 @@ export default function DevToolsSuperpowers(props: Props) {
         </div>
 
         {item.id === 1 && <CssShadowEditors />}
+        {item.id === 2 && <Logpoint />}
       </div>
     </div>
   );

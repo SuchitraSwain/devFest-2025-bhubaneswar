@@ -99,7 +99,7 @@
   }
 
   .screenshot {
-    @apply max-w-full h-auto rounded-lg shadow-lg border border-google-border object-contain block mx-auto;
+    @apply max-w-lg h-auto rounded-lg shadow-lg border border-google-border object-contain block mx-auto;
     max-height: 60vh;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }

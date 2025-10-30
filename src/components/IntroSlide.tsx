@@ -1,5 +1,3 @@
-import React from "react";
-
 export const IntroSlide = () => (
   <div className="intro-slide">
     <div className="intro-content">
