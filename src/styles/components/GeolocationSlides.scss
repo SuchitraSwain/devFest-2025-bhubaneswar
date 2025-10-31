@@ -158,8 +158,8 @@
   }
 
   .sensors-layout {
-    @apply grid gap-8 items-start my-8;
-    grid-template-columns: 1fr 1fr;
+    @apply grid gap-2 items-start my-8;
+    grid-template-columns: 2fr 1.5fr;
   }
 
   .sensors-right {
