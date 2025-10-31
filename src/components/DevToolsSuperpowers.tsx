@@ -4,6 +4,7 @@ import Logpoint from "./Logpoint";
 import Coverage from "./Coverage";
 import BreakOnDOM from "./BreakOnDOM";
 import RenderingTab from "./RenderingTab";
+import CssOverview from "./CssOverview";
 
 interface Props {
   itemIndex: number;
@@ -42,7 +43,7 @@ export default function DevToolsSuperpowers(props: Props) {
         {item.id === 3 && <Coverage />}
         {item.id === 4 && <BreakOnDOM />}
         {item.id === 5 && <RenderingTab />}
-        
+        {item.id === 6 && <CssOverview />}
       </div>
     </div>
   );

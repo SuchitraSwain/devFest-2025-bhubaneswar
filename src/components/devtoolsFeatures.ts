@@ -37,4 +37,10 @@ export const DEVTOOLS_FEATURES: DevtoolFeature[] = [
     description:
       "The Rendering panel helps you debug compositing, scroll performance, color schemes (Light/Dark), and simulate visual impairments to improve accessibility and UX.",
   },
+  {
+    id: 6,
+    title: "CSS Overview: Identify potential CSS improvements",
+    description:
+      "The CSS Overview panel helps you analyze and improve the consistency and quality of your website's design. It gives a clear snapshot of how CSS is being used across your page, helping you identify inconsistencies, unused declarations, and accessibility issues.",
+  },
 ];
