@@ -7,6 +7,7 @@ import RenderingTab from "./RenderingTab";
 import CssOverview from "./CssOverview";
 import CaptureNodeScreenshot from "./CaptureNodeScreenshot";
 import CssAnimations from "./CssAnimations";
+import Snippets from "./Snippets";
 
 interface Props {
   itemIndex: number;
@@ -48,6 +49,7 @@ export default function DevToolsSuperpowers(props: Props) {
         {item.id === 6 && <CssOverview />}
         {item.id === 7 && <CaptureNodeScreenshot />}
         {item.id === 8 && <CssAnimations />}
+        {item.id === 9 && <Snippets />}
       </div>
     </div>
   );

@@ -55,4 +55,10 @@ export const DEVTOOLS_FEATURES: DevtoolFeature[] = [
     description:
       "CSS animations can be a real headache, but Chrome's got you covered. The Animations tab lets you record, replay, scrub through timelines, and debug every animation on your page—perfect for improving your own animations or reverse engineering others.",
   },
+  {
+    id: 9,
+    title: "Snippets: Reusable JavaScript in DevTools",
+    description:
+      "Snippets let you write, save, and run reusable JavaScript code directly inside the browser — almost like mini scripts or lightweight extensions. Perfect for automating repetitive tasks, debugging, experimenting, or enhancing pages on the fly.",
+  },
 ];
