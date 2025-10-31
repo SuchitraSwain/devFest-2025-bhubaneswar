@@ -25,7 +25,7 @@
   }
 
   .intro-section {
-    @apply w-5/6 mx-auto bg-white p-16 border-none;
+    @apply w-11/12 mx-auto bg-white py-16 border-none;
 
     p {
       @apply text-lg leading-loose mb-8 text-left text-google-gray;
@@ -49,7 +49,7 @@
   }
 
   .locations-settings-section {
-    @apply w-5/6 mx-auto bg-white p-8 border-none;
+    @apply w-11/12 mx-auto bg-white py-8 border-none;
     min-height: calc(100vh - 200px);
 
     p {
@@ -99,7 +99,7 @@
   }
 
   .screenshot {
-    @apply max-w-lg h-auto rounded-lg shadow-lg border border-google-border object-contain block mx-auto;
+    @apply max-w-xl h-auto rounded-lg shadow-lg border border-google-border object-contain block mx-auto;
     max-height: 60vh;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
@@ -125,7 +125,7 @@
   }
 
   .sensors-panel-section {
-    @apply w-5/6 mx-auto bg-white p-8 border-none;
+    @apply w-11/12 mx-auto bg-white py-8 border-none;
     min-height: calc(100vh - 200px);
 
     p {
@@ -167,7 +167,7 @@
   }
 
   .sensors-screenshots {
-    @apply flex flex-col gap-6 items-start;
+    @apply flex flex-col gap-6 items-center;
   }
 
   .screenshot-container {
@@ -199,7 +199,7 @@
   }
 
   .demo-content {
-    @apply w-5/6 mx-auto;
+    @apply w-11/12 mx-auto;
   }
 
   .geolocation-section {

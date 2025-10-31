@@ -2,6 +2,7 @@ import { DEVTOOLS_FEATURES } from "./devtoolsFeatures";
 import CssShadowEditors from "./CssShadowEditors";
 import Logpoint from "./Logpoint";
 import Coverage from "./Coverage";
+import BreakOnDOM from "./BreakOnDOM";
 
 interface Props {
   itemIndex: number;
@@ -19,8 +20,8 @@ export default function DevToolsSuperpowers(props: Props) {
 
       <div className="sensors-panel-section">
         <div className="w-full">
-            <h3
-              className="font-bold text-4xl bg-gradient-to-r from-google-blue to-brand-purple bg-clip-text text-transparent !text-left"
+          <h3
+            className="font-bold text-4xl bg-gradient-to-r from-google-blue to-brand-purple bg-clip-text text-transparent !text-left"
             style={{
               textShadow:
                 "0 1px 2px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.08)",
@@ -29,7 +30,7 @@ export default function DevToolsSuperpowers(props: Props) {
             {item.id.toString().padStart(2, "0")}: {item.title}
           </h3>
           {item.description && (
-              <p className="mt-1 text-base text-google-gray font-normal !text-left">
+            <p className="mt-1 text-base text-google-gray font-normal !text-left">
               {item.description}
             </p>
           )}
@@ -38,6 +39,7 @@ export default function DevToolsSuperpowers(props: Props) {
         {item.id === 1 && <CssShadowEditors />}
         {item.id === 2 && <Logpoint />}
         {item.id === 3 && <Coverage />}
+        {item.id === 4 && <BreakOnDOM />}
       </div>
     </div>
   );
