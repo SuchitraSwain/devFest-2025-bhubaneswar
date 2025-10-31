@@ -49,4 +49,10 @@ export const DEVTOOLS_FEATURES: DevtoolFeature[] = [
     description:
       "Take a screenshot of a specific HTML element directly without needing any third-party tools. Perfect for documentation, UI reviews, bug reporting, or capturing the entire scrollable page in one image.",
   },
+  {
+    id: 8,
+    title: "CSS Animations Inspector",
+    description:
+      "CSS animations can be a real headache, but Chrome's got you covered. The Animations tab lets you record, replay, scrub through timelines, and debug every animation on your page—perfect for improving your own animations or reverse engineering others.",
+  },
 ];
