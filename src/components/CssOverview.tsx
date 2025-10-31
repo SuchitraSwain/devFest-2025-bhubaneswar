@@ -8,6 +8,16 @@ export default function CssOverview() {
         <p className="text-sm text-google-gray mb-4">
           The CSS Overview panel helps you analyze and improve the consistency and quality of your website's design. It gives a clear snapshot of how CSS is being used across your page.
         </p>
+        <p className="text-sm mb-4">
+          <a 
+            href="https://developer.chrome.com/docs/devtools/css-overview" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Learn more about CSS Overview →
+          </a>
+        </p>
 
         <div className="mb-4">
           <h5 className="font-medium mb-2">Key Highlights</h5>

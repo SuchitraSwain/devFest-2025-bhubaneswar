@@ -129,7 +129,7 @@
     min-height: calc(100vh - 200px);
 
     p {
-      @apply text-lg leading-loose text-center text-google-gray;
+      @apply text-[16px] leading-loose text-start text-google-gray;
     }
   }
 
