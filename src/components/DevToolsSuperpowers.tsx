@@ -5,6 +5,7 @@ import Coverage from "./Coverage";
 import BreakOnDOM from "./BreakOnDOM";
 import RenderingTab from "./RenderingTab";
 import CssOverview from "./CssOverview";
+import CaptureNodeScreenshot from "./CaptureNodeScreenshot";
 
 interface Props {
   itemIndex: number;
@@ -44,6 +45,7 @@ export default function DevToolsSuperpowers(props: Props) {
         {item.id === 4 && <BreakOnDOM />}
         {item.id === 5 && <RenderingTab />}
         {item.id === 6 && <CssOverview />}
+        {item.id === 7 && <CaptureNodeScreenshot />}
       </div>
     </div>
   );

@@ -43,4 +43,10 @@ export const DEVTOOLS_FEATURES: DevtoolFeature[] = [
     description:
       "The CSS Overview panel helps you analyze and improve the consistency and quality of your website's design. It gives a clear snapshot of how CSS is being used across your page, helping you identify inconsistencies, unused declarations, and accessibility issues.",
   },
+  {
+    id: 7,
+    title: "Capture Node Screenshot",
+    description:
+      "Take a screenshot of a specific HTML element directly without needing any third-party tools. Perfect for documentation, UI reviews, bug reporting, or capturing the entire scrollable page in one image.",
+  },
 ];
