@@ -24,10 +24,17 @@ export const DEVTOOLS_FEATURES: DevtoolFeature[] = [
     description:
       "The Coverage panel helps you find unused JavaScript and CSS code. Removing unused code can speed up your page load and save the mobile data of your users.",
   },
+
   {
     id: 4,
     title: "Break on DOM Modification",
     description:
       "Debug mysterious DOM changes by breaking exactly when elements are modified, added, or removed. Perfect for tracking down flickering issues and unexpected UI jumps in third-party code.",
+  },
+  {
+    id: 5,
+    title: "Rendering: Visualize Paint & Accessibility States",
+    description:
+      "The Rendering panel helps you debug compositing, scroll performance, color schemes (Light/Dark), and simulate visual impairments to improve accessibility and UX.",
   },
 ];
