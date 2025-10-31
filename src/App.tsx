@@ -9,6 +9,9 @@ import DevToolsSuperpowers from "./components/DevToolsSuperpowers";
 import { DEVTOOLS_FEATURES } from "./components/devtoolsFeatures";
 import IntroSlide from "./components/IntroSlide";
 import TopicsSlide from "./components/TopicsSlide";
+import AIInnovations from "./components/AIInnovations";
+import { AI_INNOVATIONS } from "./components/aiInnovationsData";
+
 
 interface Slide {
   id: number;
@@ -68,8 +71,14 @@ function App() {
         type: "content",
         content: <AutoClosingDebug />,
       },
-      ...DEVTOOLS_FEATURES.map((f, idx) => ({
+      ...AI_INNOVATIONS.map((ai, idx) => ({
         id: 7 + idx,
+        title: `AI Innovations: ${ai.title}`,
+        type: "content" as const,
+        content: <AIInnovations itemIndex={idx} />,
+      })),
+      ...DEVTOOLS_FEATURES.map((f, idx) => ({
+        id: 7 + AI_INNOVATIONS.length + idx,
         title: `DevTools Superpower ${f.id}`,
         type: "content" as const,
         content: <DevToolsSuperpowers itemIndex={idx} />,
