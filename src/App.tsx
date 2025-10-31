@@ -197,7 +197,9 @@ function App() {
         <button
           className="nav-button next"
           onClick={nextSlide}
-          disabled={currentSlide === slides.length - 1 || imagePreviewSrc !== null}
+          disabled={
+            currentSlide === slides.length - 1 || imagePreviewSrc !== null
+          }
         >
           Next →
         </button>
@@ -206,6 +208,17 @@ function App() {
       <div className="slide-counter">
         {currentSlide + 1} / {slides.length}
       </div>
+
+      {slides[currentSlide].type !== "intro" && (
+        <div className="brand-image">
+          <img
+            src="/icon2.png"
+            alt="DevFest Brand"
+            className="brand-logo"
+            data-no-preview="true"
+          />
+        </div>
+      )}
 
       {imagePreviewSrc && (
         <div
