@@ -90,11 +90,11 @@ export default function BreakOnDOM() {
               </button>
               <ul
                 ref={listRef}
-                className="movies column"
+                className="movies row"
                 id="movies-list"
                 style={{
                   display: "flex",
-                  flexDirection: showDetails ? "row" : "column",
+                  flexDirection: showDetails ? "column" : "row",
                   gap: "1rem",
                   listStyle: "none",
                   padding: 0,

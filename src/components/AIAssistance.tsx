@@ -1,6 +1,40 @@
+import { useState } from "react";
 import "../styles/components/GeolocationSlides.scss";
 
+const styleImages = [
+  {
+    src: "/style.png",
+    alt: "AI Assistance in Styles panel",
+  },
+  {
+    src: "/style1.png",
+    alt: "Right-click menu with Debug with AI option",
+  },
+  {
+    src: "/style2.png",
+    alt: "AI chat prompt interface",
+  },
+  {
+    src: "/style3.png",
+    alt: "Connect with workspace option in AI suggestions",
+  },
+];
+
 export default function AIAssistance() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? styleImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === styleImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
     <div className="sensors-layout mt-6">
       <div className="sensors-explanation">
@@ -29,34 +63,30 @@ export default function AIAssistance() {
       </div>
 
       <div className="sensors-right">
-        <div className="sensors-screenshots mt-0">
+        <div className="carousel-container relative">
           <div className="screenshot-container">
             <img
-              src="/style.png"
-              alt="AI Assistance in Styles panel"
+              src={styleImages[currentIndex].src}
+              alt={styleImages[currentIndex].alt}
               className="screenshot"
             />
           </div>
-          <div className="screenshot-container">
-            <img
-              src="/style1.png"
-              alt="Right-click menu with Debug with AI option"
-              className="screenshot"
-            />
-          </div>
-          <div className="screenshot-container">
-            <img
-              src="/style2.png"
-              alt="AI chat prompt interface"
-              className="screenshot"
-            />
-          </div>
-          <div className="screenshot-container">
-            <img
-              src="/style3.png"
-              alt="Connect with workspace option in AI suggestions"
-              className="screenshot"
-            />
+          <button
+            onClick={goToPrevious}
+            className="carousel-arrow carousel-arrow-left"
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+          <button
+            onClick={goToNext}
+            className="carousel-arrow carousel-arrow-right"
+            aria-label="Next image"
+          >
+            ›
+          </button>
+          <div className="carousel-indicator">
+            {currentIndex + 1} / {styleImages.length}
           </div>
         </div>
       </div>
