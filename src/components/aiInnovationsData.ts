@@ -23,11 +23,5 @@ export const AI_INNOVATIONS: AIInnovation[] = [
     description:
       "AI-powered assistance across DevTools panels including Styling, Performance, Network, and Sources for improved debugging and optimization.",
   },
-  {
-    id: 4,
-    title: "Auto Labels for Performance Trace Annotations",
-    description:
-      "AI automatically generates meaningful labels and annotations in Performance traces, making it easier to understand bottlenecks and optimize your application.",
-  },
 ];
 

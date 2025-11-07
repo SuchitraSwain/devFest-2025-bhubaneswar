@@ -2,7 +2,6 @@ import { AI_INNOVATIONS } from "./aiInnovationsData";
 import EnableAIInnovations from "./EnableAIInnovations";
 import ConsoleInsights from "./ConsoleInsights";
 import AIAssistance from "./AIAssistance";
-import AutoLabelsPerformance from "./AutoLabelsPerformance";
 
 interface Props {
   itemIndex: number;
@@ -39,7 +38,6 @@ export default function AIInnovations(props: Props) {
         {item.id === 1 && <EnableAIInnovations />}
         {item.id === 2 && <ConsoleInsights />}
         {item.id === 3 && <AIAssistance />}
-        {item.id === 4 && <AutoLabelsPerformance />}
       </div>
     </div>
   );
