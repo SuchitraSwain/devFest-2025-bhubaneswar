@@ -90,15 +90,10 @@ export default function BreakOnDOM() {
               </button>
               <ul
                 ref={listRef}
-                className="movies row"
+                className={`movies ${showDetails ? "column" : "row"} flex ${
+                  showDetails ? "flex-col" : "flex-row"
+                } gap-4 list-none p-0`}
                 id="movies-list"
-                style={{
-                  display: "flex",
-                  flexDirection: showDetails ? "column" : "row",
-                  gap: "1rem",
-                  listStyle: "none",
-                  padding: 0,
-                }}
               >
                 {movies.map((movie, index) => (
                   <li key={index} className="movie-item">
