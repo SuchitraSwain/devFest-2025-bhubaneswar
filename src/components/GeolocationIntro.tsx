@@ -4,7 +4,7 @@ const GeolocationIntro = () => {
   return (
     <div className="slide intro-slide">
       <div className="slide-header">
-        <h2>🌍 What is Geolocation Testing?</h2>
+        <h2>01: 🌍 What is Geolocation Testing?</h2>
         <p>
           Learn how to test geolocation functionality using Chrome DevTools
         </p>

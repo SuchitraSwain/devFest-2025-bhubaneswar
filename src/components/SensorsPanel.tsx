@@ -4,7 +4,7 @@ const SensorsPanel = () => {
   return (
     <div className="slide sensors-slide">
       <div className="slide-header">
-        <h2>🎯 Using the Sensors Panel</h2>
+        <h2>01: 🎯 Using the Sensors Panel</h2>
         <p>Learn how to use the Sensors panel to simulate locations</p>
       </div>
 

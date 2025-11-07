@@ -293,7 +293,7 @@ const GeolocationDemo = () => {
   return (
     <div className="slide demo-slide">
       <div className="slide-header">
-        <h2>🚀 {t.title}</h2>
+        <h2>01: 🚀 {t.title}</h2>
         <p>{t.subtitle}</p>
       </div>
 

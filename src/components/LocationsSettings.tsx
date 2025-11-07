@@ -4,7 +4,7 @@ const LocationsSettings = () => {
   return (
     <div className="slide locations-slide">
       <div className="slide-header">
-        <h2>📍 Setting Up Location Presets</h2>
+        <h2>01: 📍 Setting Up Location Presets</h2>
         <p>Learn how to create custom location presets in Chrome DevTools</p>
       </div>
 

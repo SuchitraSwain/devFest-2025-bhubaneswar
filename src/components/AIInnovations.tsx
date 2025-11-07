@@ -13,7 +13,7 @@ export default function AIInnovations(props: Props) {
   return (
     <div className="slide sensors-slide">
       <div className="slide-header">
-        <h2>AI Innovations in Chrome DevTools</h2>
+        <h2>03: AI Innovations in Chrome DevTools</h2>
         <p>Unlock the power of AI-assisted debugging and development</p>
       </div>
 

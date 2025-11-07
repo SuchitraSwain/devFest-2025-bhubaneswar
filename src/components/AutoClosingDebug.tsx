@@ -5,7 +5,7 @@ function AutoClosingDebug(): React.ReactElement {
   return (
     <div className="slide sensors-slide">
       <div className="slide-header">
-        <h2>🧰 Debugging Auto‑Closing Elements</h2>
+        <h2>02: 🧰 Debugging Auto‑Closing Elements</h2>
         <p>Keep menus/tooltips open or pause the page to inspect safely.</p>
       </div>
 

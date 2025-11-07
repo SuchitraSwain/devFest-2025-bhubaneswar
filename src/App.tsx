@@ -11,6 +11,7 @@ import IntroSlide from "./components/IntroSlide";
 import TopicsSlide from "./components/TopicsSlide";
 import AIInnovations from "./components/AIInnovations";
 import { AI_INNOVATIONS } from "./components/aiInnovationsData";
+import QASlide from "./components/QASlide";
 
 
 interface Slide {
@@ -83,6 +84,12 @@ function App() {
         type: "content" as const,
         content: <DevToolsSuperpowers itemIndex={idx} />,
       })),
+      {
+        id: 7 + AI_INNOVATIONS.length + DEVTOOLS_FEATURES.length,
+        title: "Questions & Answers",
+        type: "topics",
+        content: <QASlide />,
+      },
     ],
     []
   );

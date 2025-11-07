@@ -19,7 +19,7 @@ export default function DevToolsSuperpowers(props: Props) {
   return (
     <div className="slide sensors-slide">
       <div className="slide-header">
-        <h2>Underrated DevTools Superpowers Most Developers Miss</h2>
+        <h2>04: Underrated DevTools Superpowers Most Developers Miss</h2>
         <p>Unlock faster debugging, smarter testing, and cleaner workflows.</p>
       </div>
 
