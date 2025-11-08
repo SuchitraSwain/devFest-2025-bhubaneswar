@@ -60,6 +60,25 @@ function MCPServerDeployment(): React.ReactElement {
               </a>
             </div>
           </div>
+
+          <div className="sensors-right">
+            <div className="sensors-screenshots">
+              <div className="screenshot-container">
+                <img
+                  src="/mcp.webp"
+                  alt="MCP Server Deployment on Cloud Run"
+                  className="screenshot"
+                />
+              </div>
+              <div className="screenshot-container">
+                <img
+                  src="/mcp1.png"
+                  alt="MCP Server Deployment on Cloud Run"
+                  className="screenshot"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
