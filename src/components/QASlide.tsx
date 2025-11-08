@@ -29,11 +29,6 @@ export const QASlide = () => (
         Feel free to ask anything about Chrome DevTools, AI features, or
         debugging techniques!
       </p>
-      <div className="qa-links">
-        <Link to="/qa" className="qa-page-link">
-          📋 View All Q&A Questions & Answers
-        </Link>
-      </div>
       <div className="contact-info">
         <p className="contact-text">
           <strong>Connect with me:</strong>
