@@ -25,6 +25,10 @@ export const TopicsSlide = () => (
           <div className="topic-number">04</div>
           <h3>Underrated DevTools Superpowers Most Developers Miss</h3>
         </div>
+        <div className="topic-card">
+          <div className="topic-number">05</div>
+          <h3>How to deploy a secure MCP server on Cloud Run</h3>
+        </div>
       </div>
     </div>
   </div>

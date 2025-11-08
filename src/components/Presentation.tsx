@@ -11,8 +11,8 @@ import IntroSlide from "./IntroSlide";
 import TopicsSlide from "./TopicsSlide";
 import AIInnovations from "./AIInnovations";
 import { AI_INNOVATIONS } from "./aiInnovationsData";
+import MCPServerDeployment from "./MCPServerDeployment";
 import QASlide from "./QASlide";
-import { Link } from "react-router-dom";
 
 interface Slide {
   id: number;
@@ -86,6 +86,12 @@ function Presentation() {
       })),
       {
         id: 7 + AI_INNOVATIONS.length + DEVTOOLS_FEATURES.length,
+        title: "Deploy a Secure MCP Server on Cloud Run",
+        type: "content",
+        content: <MCPServerDeployment />,
+      },
+      {
+        id: 7 + AI_INNOVATIONS.length + DEVTOOLS_FEATURES.length + 1,
         title: "Questions & Answers",
         type: "topics",
         content: <QASlide />,
@@ -182,11 +188,6 @@ function Presentation() {
 
   return (
     <div className="presentation-container">
-      <div className="presentation-nav-link">
-        <Link to="/qa" className="qa-nav-button">
-          View Q&A →
-        </Link>
-      </div>
       <div
         className={`slide-container ${
           slides[currentSlide].type === "content" ? "content-slide" : ""
@@ -258,4 +259,3 @@ function Presentation() {
 }
 
 export default Presentation;
-

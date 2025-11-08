@@ -117,7 +117,7 @@
 
   .topics-grid {
     @apply grid gap-8 px-4;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .topics-list {
@@ -264,6 +264,12 @@
 
 // Responsive styles
 @layer utilities {
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .topics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 768px) {
     .main-title {
       @apply text-3xl;
