@@ -1,5 +1,4 @@
 import { QRCodeSVG } from "qrcode.react";
-import { Link } from "react-router-dom";
 import "../styles/components/GeolocationSlides.scss";
 
 export const QASlide = () => (
