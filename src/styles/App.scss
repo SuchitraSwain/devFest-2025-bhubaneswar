@@ -25,6 +25,15 @@
 @layer components {
   .presentation-container {
     @apply w-screen h-screen flex flex-col relative bg-white;
+
+    .presentation-nav-link {
+      @apply absolute top-4 right-4 z-50;
+      
+      .qa-nav-button {
+        @apply px-4 py-2 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-colors font-medium;
+        text-decoration: none;
+      }
+    }
   }
 
   .slide-container {
@@ -135,6 +144,15 @@
 
   .topic-card p {
     @apply text-sm text-google-gray leading-relaxed;
+  }
+
+  .qa-links {
+    @apply mb-6 text-center;
+
+    .qa-page-link {
+      @apply inline-block px-6 py-3 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-colors font-medium text-lg;
+      text-decoration: none;
+    }
   }
 
   .qa-content {
