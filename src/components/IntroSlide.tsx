@@ -9,7 +9,7 @@ export const IntroSlide = () => (
         <div className="speaker-card">
           <h2 className="presenter-name">Suchitra Swain</h2>
           <p className="speaker-role">
-            Sr Software Engineer &amp; Sr Full Stack Web Developer
+            Sr Software Engineer &amp; Sr Full Stack Web Developer, Berlin
           </p>
           <div className="topic-section">
             <h3 className="topic-title">🎯 Topic</h3>
